@@ -7,7 +7,10 @@ import { Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote ('They say a person needs just three things to be truly happy in this world: someone to love, something to do, and something to hope for.','Tom Bodett','Stl SuperG',  new Date(2019,8,14),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
   ];
 
   constructor() { }

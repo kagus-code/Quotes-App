@@ -1,8 +1,6 @@
-<div>
-  <h1>Quotes</h1>
-  <ul>
-    <li *ngFor="let quote of quotes">
-      {{ quote.date }}
-    </li>
-  </ul>
+<div *ngFor="let quote of quotes; let i = index">
+  <div class="quote-text">
+    <h3>{{ quote.quote }}</h3>
+  </div>
+  <span>{{ quote.author }}</span>
 </div>
