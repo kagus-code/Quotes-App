@@ -1,6 +1,17 @@
-<div *ngFor="let quote of quotes; let i = index">
+<!---<div *ngFor="let quote of quotes; let i = index">
   <div class="quote-text">
     <h3>{{ quote.quote }}</h3>
   </div>
   <span>{{ quote.author }}</span>
+</div>
+--->
+
+<div class="card" *ngFor="let quote of quotes">
+  <div id="card-image" class="card-body">
+    <p class="card-text">
+      {{ quote.quote }}
+    </p>
+    <a href="#" class="btn btn-outline-secondary">Quote Details</a>
+  </div>
+  <br />
 </div>
