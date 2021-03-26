@@ -7,10 +7,10 @@ import { Quote} from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
-    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
-    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
-    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
-    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','Martin Luther King, Jr.','Jane Faith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','MARTIN LUTHER KING (JR.)','Jane Faith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Knowledge is knowing a tomato is a fruit; wisdom is not putting it in a fruit salad.','MILES KINGTON.','kingsley Smith',  new Date(2021,3,26),   0,  0),
+    new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26),   0,  0),
+    new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,26),   0,  0),
   ];
 
   constructor() { }
