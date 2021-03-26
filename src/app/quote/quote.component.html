@@ -1,4 +1,4 @@
-<div *ngFor="let quote of quotes">
+<div *ngFor="let quote of quotes; let i = index">
   <div id="quote-text" class="container">
     <div class="row">
       <div class="col-md-4">
@@ -8,8 +8,13 @@
             <hr />
           </div>
           <div class="card-footer">
-            <app-quote-details [quote]="quote"></app-quote-details>
-            <a href="#" class="btn btn-outline-secondary">Quote Details</a>
+            <app-quote-details
+              *ngIf="quote.showDescription"
+              [quote]="quote"
+            ></app-quote-details>
+            <a (click)="toggleDetails(i)" class="btn btn-outline-secondary"
+              >Quote Details</a
+            >
           </div>
         </div>
         <br />

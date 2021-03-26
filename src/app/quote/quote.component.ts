@@ -11,7 +11,9 @@ export class QuoteComponent implements OnInit {
     new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26),   0,  0),
     new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,26),   0,  0),
   ];
-
+  toggleDetails(index){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
   constructor() { }
 
   ngOnInit(): void {
