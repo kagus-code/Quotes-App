@@ -1,17 +1,18 @@
-<!---<div *ngFor="let quote of quotes; let i = index">
-  <div class="quote-text">
-    <h3>{{ quote.quote }}</h3>
+<div *ngFor="let quote of quotes">
+  <div id="quote-text" class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div id="card-image" class="card-body">
+            <p class="card-text">" {{ quote.quote }}</p>
+            <hr />
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-outline-secondary">Quote Details</a>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
   </div>
-  <span>{{ quote.author }}</span>
-</div>
---->
-
-<div class="card" *ngFor="let quote of quotes">
-  <div id="card-image" class="card-body">
-    <p class="card-text">
-      {{ quote.quote }}
-    </p>
-    <a href="#" class="btn btn-outline-secondary">Quote Details</a>
-  </div>
-  <br />
 </div>
