@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { LandingComponent } from './landing/landing.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { TimePassedPipe } from './time-passed.pipe';
+import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { TimePassedPipe } from './time-passed.pipe';
     QuoteComponent,
     LandingComponent,
     QuoteDetailsComponent,
-    TimePassedPipe
+    TimePassedPipe,
+    QuotesFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
