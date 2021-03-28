@@ -36,10 +36,19 @@ export class QuoteComponent implements OnInit {
     quote.date = new Date;
     this.quotes.push(quote)
     console.log(quote.date)
-  
-
-
     
   }
+ 
+
+  downVote(quote){
+    quote.downvote +=1;
+    console.log(quote);
+
+  }
+  upVote(quote){
+  quote.upvote +=1;
+    console.log(quote);
+    
+ }
 
 }

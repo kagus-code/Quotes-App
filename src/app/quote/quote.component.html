@@ -39,10 +39,16 @@
               <br />
               <div class="row">
                 <div class="col-6">
-                  <a id="vote" class="btn btn-success"> upvote </a>
+                  <a (click)="upVote(quote)" id="vote" class="btn btn-success">
+                    upvote
+                  </a>
+                  <p>{{ quote.upvote }}</p>
                 </div>
                 <div class="col-6">
-                  <a id="vote" class="btn btn-danger"> downvote </a>
+                  <a (click)="downVote(quote)" id="vote" class="btn btn-danger">
+                    downvote
+                  </a>
+                  <p>{{ quote.downvote }}</p>
                 </div>
               </div>
             </div>
