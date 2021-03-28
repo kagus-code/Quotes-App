@@ -1,61 +1,85 @@
+<div id="landing" class="container-fluid text-center">
+  <div>
+    <h1>Get inspired and Create your own Quotes</h1>
+    <hr />
+  </div>
+  <br />
+  <div class="row">
+    <div class="col-lg-9">
+      <!--display quotes-->
+      <div id="quote-text" class="container">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
+            <div class="card">
+              <div id="card-image" class="card-body">
+                <p class="card-text">" {{ quote.quote }}</p>
+                <hr />
+              </div>
+              <div class="card-footer">
+                <app-quote-details
+                  *ngIf="quote.showDescription"
+                  [quote]="quote"
+                  (isComplete)="deleteQuote($event, i)"
+                ></app-quote-details>
+
+                <div class="container">
+                  <div class="row">
+                    <div class="col-12">
+                      <p>Created : {{ quote.date | timePassed }}</p>
+                      <a
+                        (click)="toggleDetails(i)"
+                        class="btn btn-outline-secondary"
+                        >Quote Details</a
+                      >
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col-6">
+                      <a
+                        (click)="upVote(quote)"
+                        id="vote"
+                        class="btn btn-success"
+                      >
+                        upvote
+                      </a>
+                      <p>{{ quote.upvote }}</p>
+                    </div>
+                    <div class="col-6">
+                      <a
+                        (click)="downVote(quote)"
+                        id="vote"
+                        class="btn btn-danger"
+                      >
+                        downvote
+                      </a>
+                      <p>{{ quote.downvote }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <!--display form--->
+
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+    </div>
+  </div>
+</div>
+
 <div>
   <div class="container">
     <div class="row">
       <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
-      </div>
+      <div class="col-md-4"></div>
       <div class="col-md-4"></div>
     </div>
   </div>
 
   <br />
-  <div id="quote-text" class="container">
-    <div class="row">
-      <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
-        <div class="card">
-          <div id="card-image" class="card-body">
-            <p class="card-text">" {{ quote.quote }}</p>
-            <hr />
-          </div>
-          <div class="card-footer">
-            <app-quote-details
-              *ngIf="quote.showDescription"
-              [quote]="quote"
-              (isComplete)="deleteQuote($event, i)"
-            ></app-quote-details>
-
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <p>Created : {{ quote.date | timePassed }}</p>
-                  <a
-                    (click)="toggleDetails(i)"
-                    class="btn btn-outline-secondary"
-                    >Quote Details</a
-                  >
-                </div>
-              </div>
-              <br />
-              <div class="row">
-                <div class="col-6">
-                  <a (click)="upVote(quote)" id="vote" class="btn btn-success">
-                    upvote
-                  </a>
-                  <p>{{ quote.upvote }}</p>
-                </div>
-                <div class="col-6">
-                  <a (click)="downVote(quote)" id="vote" class="btn btn-danger">
-                    downvote
-                  </a>
-                  <p>{{ quote.downvote }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br />
-      </div>
-    </div>
-  </div>
 </div>
