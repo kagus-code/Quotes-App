@@ -9,11 +9,14 @@ export class QuoteComponent implements OnInit {
   
   quotes:Quote[] = [
     new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','MARTIN LUTHER KING (JR.)','Jane Faith',  new Date(2021,3,26),   0,  0),
-    new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26),   0,  0),
+    new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26,15,10,3,500),   0,  0),
     new Quote ('If you are  walking down the right path and you are willing to keep walking, eventually you will make progress..','BARRACK OBAMA.','Dwight Schruit',  new Date(2021,3,10),   0,  0),
     new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,10),   0,  0),
     
   ];
+
+
+  
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
@@ -21,8 +24,11 @@ export class QuoteComponent implements OnInit {
   
 
   deleteQuote(isComplete, index){
-    if (isComplete) {
-      this.quotes.splice(index,1)
+ if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete?`)
+      if (toDelete){
+        this.quotes.splice(index,1)
+      }
     }
   }
 
@@ -42,13 +48,14 @@ export class QuoteComponent implements OnInit {
 
   downVote(quote){
     quote.downvote ++;
-    console.log(quote);
+  
 
   }
   upVote(quote){
   quote.upvote ++;
-    console.log(quote);
+
     
  }
 
+ 
 }
