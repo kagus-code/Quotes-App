@@ -1,6 +1,5 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Quote</h2>
-  {{ newQuote.quote }}
   <hr />
   <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
     <div class="form-group">
@@ -16,6 +15,13 @@
         #quote="ngModel"
       >
       </textarea>
+
+      <div
+        [hidden]="author.valid || author.pristine"
+        class="alert alert-danger"
+      >
+        <p>This input is required</p>
+      </div>
     </div>
     <div class="form-group">
       <label for="description">Author :</label>
@@ -60,8 +66,6 @@
         <p>This input is required</p>
       </div>
     </div>
-    <button class="btn btn-outline-dark btn-change" type="submit">
-      Submit
-    </button>
+    <button class="btn btn-primary" type="submit">Submit</button>
   </form>
 </div>

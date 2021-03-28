@@ -10,8 +10,9 @@ export class QuoteComponent implements OnInit {
   quotes:Quote[] = [
     new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','MARTIN LUTHER KING (JR.)','Jane Faith',  new Date(2021,3,26),   0,  0),
     new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26),   0,  0),
-    new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,10),   0,  0),
     new Quote ('If you are  walking down the right path and you are willing to keep walking, eventually you will make progress..','BARRACK OBAMA.','Dwight Schruit',  new Date(2021,3,10),   0,  0),
+    new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,10),   0,  0),
+    
   ];
   toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -35,6 +36,9 @@ export class QuoteComponent implements OnInit {
     quote.date = new Date;
     this.quotes.push(quote)
     console.log(quote.date)
+  
+
+
     
   }
 
