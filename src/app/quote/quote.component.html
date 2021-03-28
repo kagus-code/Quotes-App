@@ -1,4 +1,14 @@
 <div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+
   <div id="quote-text" class="container">
     <div class="row">
       <div class="col-md-4" *ngFor="let quote of quotes; let i = index">

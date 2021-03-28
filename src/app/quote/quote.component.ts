@@ -17,10 +17,7 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
  
-  addNewQuote(quote){
-    let quoteLength = this.quotes.length;
-    this.quotes.push(quote)
-  }
+  
 
   deleteQuote(isComplete, index){
     if (isComplete) {
@@ -31,6 +28,14 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  addNewQuote(quote){
+    quote.upvote = 0;
+    quote.downvote = 0;
+    quote.date = new Date;
+    this.quotes.push(quote)
+    console.log(quote.date)
+    
   }
 
 }
