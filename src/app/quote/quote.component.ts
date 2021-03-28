@@ -41,12 +41,12 @@ export class QuoteComponent implements OnInit {
  
 
   downVote(quote){
-    quote.downvote +=1;
+    quote.downvote ++;
     console.log(quote);
 
   }
   upVote(quote){
-  quote.upvote +=1;
+  quote.upvote ++;
     console.log(quote);
     
  }
