@@ -1,5 +1,6 @@
 import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { Quote} from '../quote'
+import { TimePassedPipe} from '../time-passed.pipe'
 @Component({
   selector: 'app-quote',
   templateUrl: './quote.component.html',
@@ -8,10 +9,10 @@ import { Quote} from '../quote'
 export class QuoteComponent implements OnInit {
   
   quotes:Quote[] = [
-    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','MARTIN LUTHER KING (JR.)','Jane Faith',  new Date(2021,3,26),   0,  0),
-    new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2021,3,26,15,10,3,500),   0,  0),
-    new Quote ('If you are  walking down the right path and you are willing to keep walking, eventually you will make progress..','BARRACK OBAMA.','Dwight Schruit',  new Date(2021,3,10),   0,  0),
-    new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2021,3,10),   0,  0),
+    new Quote ('Darkness cannot drive out darkness; only light can do that. Hate cannot drive out hate; only love can do that.','MARTIN LUTHER KING (JR.)','Jane Faith',  new Date(2017,3,26),   0,  0),
+    new Quote ('Some cause happiness wherever they go; others, whenever they go.','OSCAR WILDE.','Gregory James',  new Date(2020,8,14),   0,  0),
+    new Quote ('If you are  walking down the right path and you are willing to keep walking, eventually you will make progress..','BARRACK OBAMA.','Dwight Schruit',  new Date(2019,3,10),   0,  0),
+    new Quote ('Victory has a thousand fathers, but defeat is an orphan.','JOHN F. KENNEDY.','Jim Harper',  new Date(2015,3,10),   0,  0),
     
   ];
 
@@ -35,6 +36,8 @@ export class QuoteComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    TimePassedPipe
+    
   }
   addNewQuote(quote){
     quote.upvote = 0;
