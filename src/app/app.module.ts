@@ -9,6 +9,7 @@ import { LandingComponent } from './landing/landing.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { TimePassedPipe } from './time-passed.pipe';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { QuotesFormComponent } from './quotes-form/quotes-form.component';
     QuoteDetailsComponent,
     TimePassedPipe,
     QuotesFormComponent,
+    HighlightDirective,
   
   ],
   imports: [

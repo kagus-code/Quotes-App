@@ -52,7 +52,7 @@
       <div id="quote-text" class="container">
         <div class="row">
           <div class="col-md-4" *ngFor="let quote of quotes; let i = index">
-            <div class="card">
+            <div appHighlight class="card">
               <div id="card-image" class="card-body">
                 <p class="card-text">" {{ quote.quote }} "</p>
                 <hr />
@@ -83,6 +83,7 @@
                         (click)="upVote(quote)"
                         id="vote"
                         class="btn btn-success"
+                        (click)="voteCount(v)"
                       >
                         upvote : {{ quote.upvote }}
                       </a>
