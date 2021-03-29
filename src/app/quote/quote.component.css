@@ -15,3 +15,24 @@
 .card {
   height: 22rem;
 }
+#cards-display {
+  animation: drop 1.5s ease;
+}
+#nav-main {
+  border-radius: 50px;
+}
+
+#footer {
+  background: black;
+  color: white;
+}
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

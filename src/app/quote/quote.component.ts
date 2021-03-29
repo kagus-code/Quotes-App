@@ -45,7 +45,7 @@ export class QuoteComponent implements OnInit {
     quote.date = new Date;
     this.quotes.push(quote)
     console.log(quote.date)
-    
+      
   }
  
 
