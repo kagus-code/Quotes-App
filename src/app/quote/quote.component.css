@@ -20,11 +20,16 @@
 }
 #nav-main {
   border-radius: 50px;
+  background: black;
+  color: white;
 }
 
 #footer {
   background: black;
   color: white;
+}
+#jumbotron {
+  color: black;
 }
 @keyframes drop {
   0% {
