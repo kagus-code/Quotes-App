@@ -64,7 +64,8 @@
                 <div class="container">
                   <div class="row">
                     <div class="col-12">
-                      <p>Created : {{ quote.date | timePassed }}</p>
+                      <p>~AUTHOR :{{ quote.author }}</p>
+                      <p>Submited {{ quote.date | timePassed }}</p>
                       <a
                         (click)="toggleDetails(i)"
                         class="btn btn-outline-secondary"
@@ -80,9 +81,8 @@
                         id="vote"
                         class="btn btn-success"
                       >
-                        upvote
+                        upvote : {{ quote.upvote }}
                       </a>
-                      <p>{{ quote.upvote }}</p>
                     </div>
                     <div class="col-6">
                       <a
@@ -90,9 +90,8 @@
                         id="vote"
                         class="btn btn-danger"
                       >
-                        downvote
+                        downvote : {{ quote.downvote }}
                       </a>
-                      <p>{{ quote.downvote }}</p>
                     </div>
                   </div>
                 </div>
