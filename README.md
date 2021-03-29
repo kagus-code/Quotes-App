@@ -1,27 +1,39 @@
-# Quotes
+# Quotes creator Web App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
+#### This is a web app for adding inspirational quotes, 27/03/2021
 
-## Development server
+#### By **Eston Kagwima**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
 
-## Code scaffolding
+This WebApp allows a user to create quotes and have
+those quotes voted on whether they are terrible or are inspirational. The user is able to enter the quote,its Author and
+the users name through a form input and submit.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Setup/Installation Requirements
 
-## Build
+- Clone the repository
+- Change directory to the project directory
+- Open project on VSCode
+- Start the project on live server through the angular CLI
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Technologies Used
 
-## Running unit tests
+- Angular
+- typescript
+- JavaScript
+- HTML
+- CSS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## link to live site on GitHub Pages
 
-## Running end-to-end tests
+## Support and contact details
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+| Eston | ekagwima745@gmail.com |
+| ----- | --------------------- |
 
-## Further help
+### License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+License
+[MIT License](https://choosealicense.com/licenses/mit/)
+Copyright (c) 2021 Eston Kagwima
