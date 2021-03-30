@@ -17,6 +17,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Clone the repository
 - Change directory to the project directory
 - Open project on VSCode
+- Run `npm install` before serving the application to install the packages and dependancies
 
 ###### Development server
 
